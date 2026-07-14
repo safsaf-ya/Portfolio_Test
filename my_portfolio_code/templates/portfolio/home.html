@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        h1 { margin-bottom: 10px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .skills span {
+            background: #2563eb;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ name }}</h1>
+        <h2>{{ title }}</h2>
+        <p>{{ bio }}</p>
+        <div class="skills">
+            {% for skill in skills %}
+                <span>{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
